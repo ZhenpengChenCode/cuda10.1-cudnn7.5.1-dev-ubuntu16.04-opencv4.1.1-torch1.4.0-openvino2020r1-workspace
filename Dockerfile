@@ -11,5 +11,9 @@ libcudnn7-dev=$CUDNN_VERSION-1+cuda10.1 \
 && \
     apt-mark hold libcudnn7 && \
     rm -rf /var/lib/apt/lists/*
-    
+
+# python
+
+# opencv4.1
+
 # pytorch1.4.0
