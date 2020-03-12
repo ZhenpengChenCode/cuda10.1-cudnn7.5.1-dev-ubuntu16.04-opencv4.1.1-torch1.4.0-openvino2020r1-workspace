@@ -17,3 +17,6 @@ libcudnn7-dev=$CUDNN_VERSION-1+cuda10.1 \
 # opencv4.1
 
 # pytorch1.4.0
+
+
+# openvino2020r1
