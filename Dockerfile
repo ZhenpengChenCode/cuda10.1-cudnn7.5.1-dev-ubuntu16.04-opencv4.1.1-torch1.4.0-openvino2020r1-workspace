@@ -37,13 +37,13 @@ ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 ENV NVIDIA_REQUIRE_CUDA "cuda>=10.1 brand=tesla,driver>=384,driver<385 brand=tesla,driver>=396,driver<397 brand=tesla,driver>=410,driver<411"
 
-# cudnn7.6.5
-ENV CUDNN_VERSION 7.6.5.32
+# cudnn7.5.1
+ENV CUDNN_VERSION 7.5.1
 LABEL com.nvidia.cudnn.version="${CUDNN_VERSION}"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    libcudnn7=$CUDNN_VERSION-1+cuda10.2 \
-libcudnn7-dev=$CUDNN_VERSION-1+cuda10.2 \
+    libcudnn7=$CUDNN_VERSION-1+cuda10.1 \
+libcudnn7-dev=$CUDNN_VERSION-1+cuda10.1 \
 && \
     apt-mark hold libcudnn7 && \
     rm -rf /var/lib/apt/lists/*
